@@ -130,6 +130,25 @@ app_license = "mit"
 # 	}
 # }
 
+
+fixtures = [
+    {
+        "doctype": "Print Format",
+        "filters": [
+            [
+                "doc_type",
+                "in",
+                (
+                    "Packing List", 
+                ),
+            ]
+        ],
+    },
+ 
+
+]
+
+
 # Scheduled Tasks
 # ---------------
 
