@@ -152,23 +152,11 @@ fixtures = [
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"geetabpackinglist.tasks.all"
-# 	],
-# 	"daily": [
-# 		"geetabpackinglist.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"geetabpackinglist.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"geetabpackinglist.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"geetabpackinglist.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+        "geetabpackinglist.task.getFiles"
+	]
+}
 
 # Testing
 # -------
