@@ -35,6 +35,16 @@ frappe.ui.form.on("Pack List", {
 			}
 		});
 	},
+	get_delivery_notes_and_items: function (frm) {
+		frappe.call({
+			method: "get_submitted_sales_invoices_and_items",
+			doc: frm.doc,
+			callback: function (r) {
+				refresh_field("delivery_notes");
+				refresh_field('pl_items');
+			}
+		});
+	},
 	before_save: function(frm) {
 		frappe.call({
 			method: "get_items",

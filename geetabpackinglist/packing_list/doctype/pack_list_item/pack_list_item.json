@@ -13,6 +13,8 @@
   "comments",
   "sales_invoice",
   "sales_invoice_item_name",
+  "delivery_note",
+  "delivery_note_item",
   "column_break_tvab",
   "item_name",
   "invoiced_qty",
@@ -102,12 +104,23 @@
    "fieldtype": "Text Editor",
    "label": "Description",
    "read_only": 1
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "label": "Delivery Note",
+   "options": "Delivery Note"
+  },
+  {
+   "fieldname": "delivery_note_item",
+   "fieldtype": "Data",
+   "label": "Delivery Note Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-08-10 12:13:11.455550",
+ "modified": "2025-09-10 10:11:27.305720",
  "modified_by": "Administrator",
  "module": "Packing List",
  "name": "Pack List Item",
