@@ -57,7 +57,7 @@
    "fieldname": "get_items_from",
    "fieldtype": "Select",
    "label": "Get Items From",
-   "options": "Sales Invoice\nDelivery Note"
+   "options": "Delivery Note\nSales Invoice"
   },
   {
    "depends_on": "eval: doc.get_items_from == \"Sales Invoice\"",
@@ -148,7 +148,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-10 10:43:03.836073",
+ "modified": "2025-09-10 13:02:03.312234",
  "modified_by": "Administrator",
  "module": "Packing List",
  "name": "Pack List",
