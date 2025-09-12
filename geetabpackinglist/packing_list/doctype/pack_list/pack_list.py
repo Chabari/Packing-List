@@ -189,7 +189,7 @@ def get_sales_invoices(self):
         SELECT DISTINCT si.name, si.posting_date, si.customer, si.base_grand_total, si.total_qty
         FROM `tabSales Invoice` si, `tabSales Invoice Item` sii
         WHERE si.name = sii.parent
-            AND si.docstatus = 1
+            AND si.docstatus = 0
             AND si.is_return != 1
 	    AND is_pos != 1
             AND si.company = %(company)s {0}
@@ -213,6 +213,8 @@ def get_sales_invoices(self):
 # Get submittedd sales invoices query
 def get_delivery_notes(self):
     si_filter = ""
+    if self.territory:
+        si_filter += " and si.territory = %(territory)s"
     if self.customer:
         si_filter += " and si.customer = %(customer)s"
     if self.source_warehouse:
@@ -236,6 +238,7 @@ def get_delivery_notes(self):
             )
         ORDER BY si.customer
         """.format(si_filter), {
+        "territory": self.territory,
         "customer": self.customer,
         "source_warehouse": self.source_warehouse,
         "from_date": self.from_date,
